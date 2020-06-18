@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3529d30c-99df-4320-ac55-97615b46dfae" activeEnvironment="Default" name="API_Training_Assesment_REST_W2" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e76ebd42-b363-4569-b295-bd7ec08dd914" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Client_credentials" path="/oauth2/token/client_credentials" id="6426e9c5-b870-4ea2-b76f-49910df5cf31"><con:settings/><con:parameters/><con:method name="Client_credentials 1" id="72fb753c-572c-491b-818d-3097e6078fe5" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>405</con:status><con:params/><con:element xmlns:cli="http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials">cli:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cli="http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials">cli:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="GetAccessToken" id="6bbcde3d-3436-4d9d-9254-ed2ce56c87fa" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic dXBza2lsbHNfcmVzdF9hZG1pbl9vYXV0aF9jbGllbnQ6dXBza2lsbHNfcmVzdF9hZG1pbl9vYXV0aF9zZWNyZXQ=" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in/api/rest_admin</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="cc5f328d-f059-45b5-975d-f5b91db3bc09" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Login" path="/api/rest_admin/user" id="8d7613da-9e42-420f-85d1-bc4f4cbabd56"><con:settings/><con:parameters/><con:method name="Login" id="3a931078-bb18-4800-bde2-61f898b2d31d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://rest-api.upskills.in/api/rest_admin/login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="AdminLogin" id="dac271d2-fdf8-4e94-a78d-eb44f29fd380" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+  "username": "upskills_admin",
+  "password": "Talent4$$"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="GetAccoundDetails" id="d31d6ada-f380-4a87-91c3-f54cd0717f8c" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:user="http://rest-api.upskills.in/api/rest_admin/user">user:Response</con:element></con:representation><con:request name="AccountDetails" id="aa6fda55-950c-4a1e-96c0-de88cefce451" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/user</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="0327430c-d68f-40ea-8051-f4286b62ad86" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Products" path="/api/rest_admin/products/818" id="c83aa376-8364-4bcf-9b49-0e2f838b1145"><con:settings/><con:parameters/><con:method name="AddProduct" id="d3d0524c-738e-4b67-bfb6-7f876ddf035d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:prod="http://rest-api.upskills.in/api/rest_admin/products">prod:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Add" id="257e470d-8b9f-4bef-99fa-600a437e8be6" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+  "model": "demo model",
+  "quantity": "12",
+  "price": "44.00",
+  "tax_class_id": "1",
+  "manufacturer_id": "20",
+  "sku": "demo sku",
+  "product_seo_url": [
+    {
+      "keyword": "Prod321",
+      "language_id": "1",
+      "store_id": "0"
+    }
+  ],
+  "status": "1",
+  "points": 0,
+  "reward": 0,
+  "image": "",
+  "other_images": [
+    ""
+  ],
+  "shipping": "1",
+  "stock_status_id": 0,
+  "upc": "",
+  "ean": "",
+  "jan": "",
+  "isbn": "",
+  "mpn": "",
+  "location": "",
+  "date_available": "2017-05-12",
+  "weight": 0,
+  "weight_class_id": 0,
+  "length": 0,
+  "width": 0,
+  "height": 0,
+  "length_class_id": 0,
+  "subtract": 0,
+  "minimum": 0,
+  "sort_order": "",
+  "product_store": [
+    "0"
+  ],
+  "product_related": [
+    "34"
+  ],
+  "product_filter": [
+    "34"
+  ],
+  "product_description": [
+    {
+      "language_id": "1",
+      "name": "demo name",
+      "description": "Description of the product",
+      "meta_title": "Meta title of the product",
+      "meta_description": "Meta description of the product",
+      "meta_keyword": "demo, keyword, demo2",
+      "tag": "Product's tag, comma separeted"
+    }
+  ],
+  "product_category": [
+    "25"
+  ],
+  "product_special": [
+    {
+      "customer_group_id": "1",
+      "price": "200",
+      "priority": "1",
+      "date_start": "2015-02-23",
+      "date_end": "2019-02-23"
+    }
+  ],
+  "product_discount": [
+    {
+      "name": "demo name",
+      "customer_group_id": "1",
+      "price": "200",
+      "priority": "1",
+      "quantity": "1",
+      "date_start": "2015-02-23",
+      "date_end": "2019-02-23"
+    }
+  ],
+  "product_attribute": [
+    {
+      "attribute_id": "16",
+      "product_attribute_description": [
+        {
+          "text": "demo name",
+          "language_id": "1"
+        }
+      ]
+    }
+  ],
+  "product_option": [
+    {
+      "type": "radio",
+      "option_id": "11",
+      "required": "1",
+      "product_option_value": [
+        {
+          "price": "10.00",
+          "price_prefix": "+",
+          "subtract": "1",
+          "points": "0",
+          "points_prefix": "+",
+          "weight": "0",
+          "weight_prefix": "+",
+          "option_value_id": "46",
+          "quantity": "0"
+        }
+      ]
+    }
+  ]
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/products</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="GetProductByID" id="cd6bf426-fbbf-48be-9bc2-5356d624b89f" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://rest-api.upskills.in/api/rest_admin/products/818">ns:Response</con:element></con:representation><con:request name="GetProduct" id="6794e6b7-44b0-4492-97f1-d9413ee4d377" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/products/818</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="81f2225b-6be9-4df9-bac1-de58a0fc242e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Bulk_products" path="/api/rest_admin/bulk_products" id="c3091273-3a79-42f3-8202-ac8767dcca21"><con:settings/><con:parameters/><con:method name="AddBulkProduct" id="7d7058ae-e257-49dc-8e36-ad97919fe90d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:bulk="http://rest-api.upskills.in/api/rest_admin/bulk_products">bulk:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Add" id="a5684592-fe0e-4270-9b54-31fba199f863" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>[
+  {
+    "model": "demo model",
+    "quantity": "21",
+    "price": "44.00",
+    "tax_class_id": "1",
+    "manufacturer_id": "12",
+    "sku": "demo sku",
+    "product_seo_url": [
+      {
+        "keyword": "Prod796",
+        "language_id": "1",
+        "store_id": "0"
+      }
+    ],
+    "status": "1",
+    "points": 0,
+    "reward": 0,
+    "image": "",
+    "other_images": [
+      ""
+    ],
+    "shipping": "1",
+    "stock_status_id": 0,
+    "upc": "",
+    "ean": "",
+    "jan": "",
+    "isbn": "",
+    "mpn": "",
+    "location": "",
+    "date_available": "2017-05-12",
+    "weight": 0,
+    "weight_class_id": 0,
+    "length": 0,
+    "width": 0,
+    "height": 0,
+    "length_class_id": 0,
+    "subtract": 0,
+    "minimum": 0,
+    "sort_order": "",
+    "product_store": [
+      "0"
+    ],
+    "product_related": [
+      "34"
+    ],
+    "product_filter": [
+      "34"
+    ],
+    "product_description": [
+      {
+        "language_id": "1",
+        "name": "demo name",
+        "description": "Description of the product",
+        "meta_title": "Meta title of the product",
+        "meta_description": "Meta description of the product",
+        "meta_keyword": "demo, keyword, demo2",
+        "tag": "Product's tag, comma separeted"
+      }
+    ],
+    "product_category": [
+      "799"
+    ],
+    "product_special": [
+      {
+        "customer_group_id": "1",
+        "price": "200",
+        "priority": "1",
+        "date_start": "2015-02-23",
+        "date_end": "2019-02-23"
+      }
+    ],
+    "product_discount": [
+      {
+        "name": "demo name",
+        "customer_group_id": "1",
+        "price": "200",
+        "priority": "1",
+        "quantity": "1",
+        "date_start": "2015-02-23",
+        "date_end": "2019-02-23"
+      }
+    ],
+    "product_attribute": [
+      {
+        "attribute_id": "16",
+        "product_attribute_description": [
+          {
+            "text": "demo name",
+            "language_id": "1"
+          }
+        ]
+      }
+    ],
+    "product_option": [
+      {
+        "type": "radio",
+        "option_id": "11",
+        "required": "1",
+        "product_option_value": [
+          {
+            "price": "10.00",
+            "price_prefix": "+",
+            "subtract": "1",
+            "points": "0",
+            "points_prefix": "+",
+            "weight": "0",
+            "weight_prefix": "+",
+            "option_value_id": "46",
+            "quantity": "0"
+          }
+        ]
+      }
+    ]
+  }
+]</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/bulk_products</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="d3ffa2ad-0385-49f4-baf9-5ec14daaf42d" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Products" path="/api/rest_admin/products" id="2fcc44d2-b070-4fdc-9892-bd7c98ebc548"><con:settings/><con:parameters/><con:method name="GetListOfProducts" id="882b4d96-aa7a-46ee-9471-5773f87db708" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:prod="http://rest-api.upskills.in/api/rest_admin/products">prod:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:prod="http://rest-api.upskills.in/api/rest_admin/products">prod:Fault</con:element></con:representation><con:request name="GetList" id="c9947486-e5ef-4900-abbd-f9f0f9e59620" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/products</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties><con:property><con:name>token</con:name><con:value>Bearer 6bdd0ddcaeaab70750b48b9c04f67c40bcf06803</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
